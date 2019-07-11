@@ -9,10 +9,10 @@ This library allows one to transform JSON Objects into an easier to read format
 
 ## Example
 
-The following JSON Object:
+The following Python dictionary (which can represent a JSON Object):
 
 
-```json
+```python
 {
     'className': 'ComputerScience',
     'classId': 2020,
