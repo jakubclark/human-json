@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/jakubclark/pretty_json.svg?branch=master)](https://travis-ci.com/jakubclark/pretty_json)
+
 # Human JSON
 
 `human_json` is a simple python library, that can take a JSON Object, and create a pretty string for that object.

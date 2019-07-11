@@ -4,6 +4,15 @@ version = "0.1.0"
 description = "Transform JSON Objects to human readable strings"
 authors = ["Kuba Clark <jakub.clark@protonmail.com>"]
 
+license = "MIT"
+
+readme = "README.md"
+
+repository = "https://github.com/jakubclark/human-json"
+homepage = "https://github.com/jakubclark/human-json"
+
+keywords = ["json", "pretty", "human"]
+
 [tool.poetry.dependencies]
 python = "^3.6"
 
