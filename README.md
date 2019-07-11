@@ -1,6 +1,6 @@
-# Pretty JSON
+# Human JSON
 
-`pretty_json` is a simple python library, that can take a JSON Object, and create a pretty string for that object.
+`human_json` is a simple python library, that can take a JSON Object, and create a pretty string for that object.
 
 JSON is easy to transport, and quite easy to read, but requires some form of prior training to properly understand it.
 This library allows one to transform JSON Objects into an easier to read format

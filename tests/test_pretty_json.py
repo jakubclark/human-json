@@ -1,6 +1,6 @@
 import pytest
 
-from pretty_json import pretty_json
+from human_json import to_human_json
 
 
 @pytest.mark.parametrize('args', [
@@ -16,7 +16,7 @@ from pretty_json import pretty_json
 ])
 def test_non_dict(args):
     with pytest.raises(TypeError):
-        pretty_json(args)
+        to_human_json(args)
 
 
 @pytest.mark.parametrize('args,expected', [
@@ -31,12 +31,12 @@ def test_non_dict(args):
     ({'key': None}, 'key: None')
 ])
 def test_simple_types(args, expected):
-    res = pretty_json(args)
+    res = to_human_json(args)
     assert res == expected
 
 
 def test_simple_dict():
-    result = pretty_json({
+    result = to_human_json({
         'key1': 'value1',
         'key2': (1, 2),
         'key3': None
@@ -48,7 +48,7 @@ def test_simple_dict():
 
 
 def test_nested_dict():
-    result = pretty_json({
+    result = to_human_json({
         'key1': {
             'in_key1': True,
             'in_key2': False,
@@ -73,7 +73,7 @@ def test_nested_dict():
 
 
 def test_nested_with_prefix():
-    result = pretty_json({
+    result = to_human_json({
         'className': 'ComputerScience',
         'classId': 2020,
         'assignments': {

@@ -3,7 +3,7 @@ from typing import Dict, List, Tuple, Any, Union
 BASE_TYPES = (str, int, float, bool)
 
 
-def pretty_json(data: Dict, indent: Union[str, int] = '\t', prefix: str = '', new_line: str = '\n'):
+def to_human_json(data: Dict, indent: Union[str, int] = '\t', prefix: str = '', new_line: str = '\n'):
     """
     Prettify a JSON Object
     :param data: The JSON Object to prettify. Must be a dictionary
