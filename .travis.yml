@@ -1,6 +1,11 @@
 language: python
 python:
-    - "3.6"
+- '3.6'
 before_install: pip install poetry
 install: pip install tox
 script: tox
+deploy:
+  provider: script
+  script: poetry publish --username jakubclark --password $PYPI_PASS --build
+  on:
+    tags: true

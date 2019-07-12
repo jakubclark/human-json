@@ -48,13 +48,11 @@ def to_human_json(json_data: Any, indent: Union[str, int] = '\t', prefix: str = 
                     else:
                         lines.append(f'{full_prefix}{k}:')
                         lines.extend(_serialize(v, depth + 1))
-            else:
-                lines.append(f'{full_prefix}-')
 
         return lines
 
     if not isinstance(json_data, ALLOWED_TYPES) and json_data is not None:
-        raise TypeError(f'Expected one of {ALLOWED_TYPES + None}. Instead, it is {type(json_data)}')
+        raise TypeError(f'Expected one of {ALLOWED_TYPES + (None,)}. Instead, it is {type(json_data)}')
 
     if isinstance(indent, int):
         indent = ' ' * indent
