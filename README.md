@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/jakubclark/pretty_json.svg?branch=master)](https://travis-ci.com/jakubclark/pretty_json)
+[![Build Status](https://travis-ci.com/jakubclark/human-json.svg?branch=master)](https://travis-ci.com/jakubclark/human-json)
 
 # Human JSON
 
@@ -50,6 +50,7 @@ assignments:
 		average_grade: None
 		description: Complete Assignment 2
 		grades:
+			-
 students:
 	student1
 	student2
@@ -64,7 +65,7 @@ students:
 You can also specify an optional prefix, that will be prefixed to each line. A possible prefix is "* ".
 Using this prefix, will return a markdown list. This can be directly copy-pasted into a markdown file, for example:
 
-
+```markdown
 * className: ComputerScience
 * classId: 2020
 * assignments:
@@ -80,6 +81,7 @@ Using this prefix, will return a markdown list. This can be directly copy-pasted
 		* average_grade: None
 		* description: Complete Assignment 2
 		* grades:
+			* -
 * students:
 	* student1
 	* student2
@@ -87,10 +89,10 @@ Using this prefix, will return a markdown list. This can be directly copy-pasted
 	* 2019
 	* None
 	* 10.5
-	
+```
 ### Custom Indentations
 
-You can also specify a custom indentation. The default is `\t`, but you can specify ` ` or even a number of spaces.
+You can also specify a custom indentation. The default is `"\t"`, but you can specify `" "` or even a number of spaces.
 Below is an example using `2`:
 
 ```text
@@ -109,6 +111,7 @@ assignments:
     average_grade: None
     description: Complete Assignment 2
     grades:
+      -
 students:
   student1
   student2

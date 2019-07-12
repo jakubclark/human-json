@@ -28,11 +28,8 @@ def to_human_json(json_data: Any, indent: Union[str, int] = '\t', prefix: str = 
 
         elif isinstance(data, (List, Tuple)):
             if data:
-                if len(data) == 1:
-                    lines.append(f'{full_prefix}{data[0]}')
-                else:
-                    for entry in data:
-                        lines.extend(_serialize(entry, depth))
+                for entry in data:
+                    lines.extend(_serialize(entry, depth))
             else:
                 lines.append(f'{full_prefix}-')
 
@@ -48,6 +45,8 @@ def to_human_json(json_data: Any, indent: Union[str, int] = '\t', prefix: str = 
                     else:
                         lines.append(f'{full_prefix}{k}:')
                         lines.extend(_serialize(v, depth + 1))
+            else:
+                lines.append(f'{full_prefix}-')
 
         return lines
 

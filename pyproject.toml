@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "human-json"
-version = "0.2.2"
+version = "0.3.0"
 description = "Transform JSON Objects to human readable strings"
 authors = ["Kuba Clark <jakub.clark@protonmail.com>"]
 
