@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "human-json"
-version = "0.1.2"
+version = "0.2.1"
 description = "Transform JSON Objects to human readable strings"
 authors = ["Kuba Clark <jakub.clark@protonmail.com>"]
 
@@ -18,7 +18,6 @@ python = "^3.6"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.0"
-isort = "^4.3"
 
 [build-system]
 requires = ["poetry>=0.12"]
